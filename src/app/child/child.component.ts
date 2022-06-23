@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'child-app',
@@ -7,6 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class ChildComponent {
   @Output() eventNew = new EventEmitter<String>();
 
+  @Input() reciverMesge: String = '';
   PressMe() {
     this.eventNew.emit('Item is presessed');
 

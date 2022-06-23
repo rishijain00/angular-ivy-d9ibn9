@@ -1,4 +1,10 @@
 <div>
   {{ message }}
-  <child-app (eventNew)="getValuefromChild($event)"></child-app>
+  <child-app
+    [reciverMesge]="parentValue"
+    (eventNew)="getValuefromChild($event)"
+  ></child-app>
+
+  <p #ptag>I am showing default message</p>
+  <p #ptag>I am showing default message</p>
 </div>
